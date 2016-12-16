@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  ng-app="Md1">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body >
+<div class="container" >
+   <!-- <p>{{1111111}}</p>
+    <p>{{Hello World!}}</p>--><!-- 不是表达式 -->
+    <p>{{3+2}}</p>
+    <p>{{3-2}}</p>
+
+    <hr/>
+    <p>{{3>4}}</p>
+    <hr/>
+    {{3>4 || 3>2}}
+    <hr/>
+    <span ng-init="age=20"></span>
+    <p>AGE：{{age>18?"成年":"未成年"}}</p>
+    <p>A:{{a=5}}</p>
+    <p>{{a}}</p>
+    <hr/>
+    <span ng-init="str='application'"></span>
+    <p>LEN:{{str.length}}</p>
+    <p>{{str.slice(1,3)}}</p>
+    <hr/>
+    <p>NAME:{{ {"name":"Tom","age":20}.name }}</p>
+    <hr/>
+    <p>{{ [10,20,30][1] }}</p>
+    <hr/>
+    <p>M:{{m}}</p>
+    <span ng-init="m=[10,20,30];n=10"></span>
+    <p class="ng-init:p=10">P:{{p}}</p>
+    <hr/>
+    <hr/>
+    <div ng-controller="Mc1">
+        <p>NAME:{{name}}</p>
+        <p>AGE:{{age1}}</p>
+    </div>
+    <p ng-controller="Mc2">
+        AGE:{{age1}}
+    </p>
+    <hr/>
+    <p ng-init="num=10.235">{{num|number:2}}</p>
+    <hr/>
+    <p ng-init="money=10.235">{{money|currency:"%%"}}</p>
+</div>
+<script src="js/angular.js"></script>
+
+<script>
+    angular.module('Md1',['ng']).controller('Mc1',function($scope){
+        $scope.name="Tom";
+    }).controller("Mc2",function($scope){
+        $scope.age1=20;
+    });
+</script>
+<!--jqLite-->
+</body>
+</html>

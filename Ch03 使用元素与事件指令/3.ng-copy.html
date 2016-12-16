@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="../js/angular.js"></script>
+</head>
+<body ng-app="">
+
+<input ng-copy="count = count + 1" ng-init="count=0" value="拷贝文本" />
+
+<p>文本被拷贝 {{count}} 次。</p>
+
+<p>实例中变量 "count" 的值在输入框的文本被拷贝时会自动增加 1。</p>
+
+</body>
+</html>
