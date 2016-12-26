@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>$scope</title>
+    <script src="angular.js"></script>
+    <script>
+        var app=angular.module('test',[]);
+        app.controller('ctrl1',function($scope){
+            $scope.username='用户名';
+            alert($scope.aa);
+        })
+    </script>
+</head>
+<body ng-init="aa=12" >
+<form ng-controller="ctrl1">
+    <input type="text" value="{{username}}">
+</form>
+</body>
+</html>

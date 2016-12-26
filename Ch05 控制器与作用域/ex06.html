@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>angular计时器</title>
+    <script src="angular.js"></script>
+    <script>
+        var app=angular.module('test',[]);
+        app.controller('ctrl1',function($scope,$interval,$timeout){
+            //参数需添加$timeout或$interval
+            $scope.a=0;
+            $scope.b=0;
+            //周期执行，angular1.2版本报错
+            var timer1=$interval(function(){
+                $scope.a+=1;
+                console.log('每隔1秒输出：'+$scope.a);
+                if($scope.a==10){
+                    $interval.cancel(timer1);
+                    console.log('清除$interval');
+                }
+            },1000);
+            //延迟执行
+            var timer2=$timeout(function(){
+                $scope.b+=1;
+                console.log('延迟3秒输出：'+$scope.b);
+            },3000);
+            //$timeout.cancel(timer2);
+        });
+    </script>
+</head>
+<body ng-controller="ctrl1">
+每隔3秒输出信息: {{a}}<br>
+延迟3秒输出信息: {{b}}
+</body>
+</html>

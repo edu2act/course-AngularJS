@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域的显示更新</title>
+    <script src="angular.js"></script>
+    <script>
+        var app=angular.module('test',[]);
+        app.controller('ctrl1',function($scope){
+            $scope.getMessage = function() {
+                setTimeout(function() {
+                    $scope.message = '3秒后执行';
+                    console.log('信息:'+$scope.message);
+                    $scope.$apply();//这里触发了一个$digest
+                }, 3000);
+            };
+            $scope.getMessage();
+        });
+    </script>
+</head>
+<body ng-controller="ctrl1">
+延迟3秒的信息: {{message}}
+</body>
+</html>

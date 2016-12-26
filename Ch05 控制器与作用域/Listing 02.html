@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>创建和使用控制器</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap-theme.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+            .controller("simpleCtrl", function ($scope) {
+
+            });
+    </script>
+</head>
+<body>
+    <div class="well" ng-controller="simpleCtrl">
+        主体内容.
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html  ng-app="Md1">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body >
+<div class="container" ng-controller="mc1">
+  1236788
+
+    <ng-include src="table"></ng-include>
+
+   <!-- <div ng-include="'table.html'">-->
+
+
+</div>
+
+<script src="js/angular.js"></script>
+
+<script>
+    angular.module('Md1',['ng']).controller('mc1',function($scope){
+        $scope.table='table.html';
+        $scope.people=[
+            {'name':'TOM','age':17,'hobby':'singing'},
+            {'name':'JIM','age':18,'hobby':'swimming'},
+            {'name':'MARRY','age':15,'hobby':'dancing'}
+        ]
+    })
+</script>
+<!--jqLite-->
+</body>
+</html>

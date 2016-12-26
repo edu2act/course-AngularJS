@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>控制器通过属性继承</title>
+    <script src="angular.js"></script>
+    <script src="Listing 11.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap-theme.css" rel="stylesheet" />
+</head>
+<body ng-controller="topCtrl">
+
+    <div class="well">
+        <h4>顶级控制器</h4>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" 
+                        ng-click="reverseText()">转换字符顺序</button>
+                <button class="btn btn-default" type="button"
+                        ng-click="changeCase()">奇数位字符转大写</button>
+            </span>
+            <input class="form-control" ng-model="data.dataValue">
+        </div>
+    </div>
+
+    <div class="well" ng-controller="ctrl1">
+        <h4>First Child Controller</h4>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button"
+                        ng-click="reverseText()">转换字符顺序</button>
+                <button class="btn btn-default" type="button"
+                        ng-click="changeCase()">转大写</button>
+            </span>
+            <input class="form-control" ng-model="data.dataValue">
+        </div>
+    </div>    
+
+    <div class="well" ng-controller="ctrl2">
+        <h4>Second Child Controller</h4>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button"
+                        ng-click="reverseText()">转换字符顺序</button>
+                <button class="btn btn-default" type="button"
+                        ng-click="changeCase()">转小写</button>
+                <button class="btn btn-default" type="button"
+                        ng-click="shiftFour()">前4个字符转大写</button>
+            </span>
+            <input class="form-control" ng-model="data.dataValue">
+        </div>
+    </div>    
+</body>
+</html>
