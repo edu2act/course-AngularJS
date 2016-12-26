@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域的显示更新</title>
+    <script src="angular.js"></script>
+    <script>
+        var app=angular.module('test',[]);
+        app.controller('ctrl1',function($scope){
+            $scope.count=0;
+            $scope.$watch('user',function(){
+                alert($scope.count);
+                $scope.count++;
+            });
+        });
+    </script>
+</head>
+<body ng-controller="ctrl1">
+user:<input type="text" ng-model="user"><br>
+password:<input type="password" ng-model="pwd"><br>
+用户名：{{user}}，密码：{{pwd}}
+</body>
+</html>

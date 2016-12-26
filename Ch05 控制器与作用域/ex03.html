@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域之间的通信</title>
+    <script src="angular.js"></script>
+    <script>
+        var app=angular.module('test',[]);
+        app.controller('c_self',function($scope){
+            $scope.click=function(){
+                $scope.$broadcast('to-child','传递给子级的数据');//向子级传递事件和数据
+                $scope.$emit('to-parent','传递给父级的数据');//向父级传递事件和数据
+            }
+        });
+        app.controller('c_parent',function($scope){
+            $scope.$on('to-parent',function(event,data){
+                console.log('to-parent controller',data);//父级能得到值
+            });
+            $scope.$on('to-child',function(event,data){
+                console.log('to-parent controller',data);//子级得不到值
+            });
+        });
+        app.controller('c_child',function($scope){
+            $scope.$on('to-child',function(event,data){
+                console.log('to-child controller',data);//子级能得到值
+            });
+            $scope.$on('to-parent',function(event,data){
+                console.log('to-child controller',data);//父级得不到值
+            });
+        });
+        app.controller('c_sibling',function($scope){
+            $scope.$on('to-parent',function(event,data){
+                console.log('to-sibling controller',data);//同级得不到值
+            });
+            $scope.$on('to-child',function(event,data){
+                console.log('to-sibling controller',data);//同级得不到值
+            });
+        });
+    </script>
+</head>
+<body>
+    <div ng-controller="c_parent"><!--父级-->
+        <div ng-controller="c_self"><!--自己-->
+            <a href="#" ng-click="click()">click me</a><!--子级-->
+            <div ng-controller="c_child"></div>
+        </div>
+        <div ng-controller="c_sibling"></div><!--同级-->
+    </div>
+</body>
+</html>

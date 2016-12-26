@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>使用一个单块控制器</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap-theme.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+            .controller("simpleCtrl", function ($scope) {
+                $scope.addresses = {};
+                $scope.setAddress = function (type, zip) {
+                    console.log("Type: " + type + " " + zip);
+                    $scope.addresses[type] = zip;
+                }
+                $scope.copyAddress = function () {
+                    $scope.shippingZip = $scope.billingZip;
+                }
+            });
+    </script>
+</head>
+<body ng-controller="simpleCtrl">
+
+    <div class="well">
+        <h4>邮政编码</h4>
+        <div class="form-group">
+            <input class="form-control" ng-model="billingZip">
+        </div>
+        <button class="btn btn-primary" ng-click="setAddress('邮编', billingZip)">
+            保存邮编
+        </button>
+    </div>
+
+    <div class="well">
+        <h4>航运邮编</h4>
+        <div class="form-group">
+            <input class="form-control" ng-model="shippingZip">
+        </div>
+        <button class="btn btn-primary" ng-click="copyAddress()">
+            使用邮编
+        </button>
+        <button class="btn btn-primary" 
+                ng-click="setAddress('航运邮编', shippingZip)">
+            保存航运邮编
+        </button>
+    </div>
+</body>
+</html>

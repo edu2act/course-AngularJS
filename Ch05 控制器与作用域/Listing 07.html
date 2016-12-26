@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>作用域之间的通信</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap-theme.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+            .controller("simpleCtrl", function ($scope, $rootScope) {
+
+                $scope.$on("zipUpdated", function (event, args) {
+                    $scope[args.type] = args.zipCode;
+                });
+
+                $scope.setAddress = function (type, zip) {
+                    $rootScope.$broadcast("zipUpdated", {
+                        type: type, zipCode: zip 
+                    });
+                    console.log("Type: " + type + " " + zip);
+                }
+
+                $scope.copyAddress = function () {
+                    $scope.zip = $scope.billingZip;
+                }
+            });
+    </script>
+
+</head>
+<body>
+    <div class="well" ng-controller="simpleCtrl">
+        <h4>邮政编码</h4>
+        <div class="form-group">
+            <input class="form-control" ng-model="zip">
+        </div>
+        <button class="btn btn-primary" ng-click="setAddress('邮政编码', zip)">
+            保存邮编
+        </button>
+    </div>
+    <div class="well" ng-controller="simpleCtrl">
+        <h4>航运邮编</h4>
+        <div class="form-group">
+            <input class="form-control" ng-model="zip">
+        </div>
+        <button class="btn btn-primary" ng-click="copyAddress()">
+            使用邮编
+        </button>
+        <button class="btn btn-primary" ng-click="setAddress('航运邮编', zip)">
+            保存航运邮编
+        </button>
+    </div>
+</body>
+</html>

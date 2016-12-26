@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>导入</title>
+    <script src="angular.js"></script>
+    <script>
+        var app=angular.module('test',[]);
+        app.controller('ctrlName',function($scope){
+            $scope.arrs=[{name:'张三',age:22},{name:'李四',age:16},
+                {name:'赵五',age:30},{name:'郑六',age:10}];
+        })
+    </script>
+</head>
+<body>
+<ul ng-controller="ctrlName">
+    <li ng-repeat="arr in arrs">{{arr}}</li>
+</ul>
+</body>
+</html>
