@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>Forms</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+        .controller("defaultCtrl", function ($scope) {
+            //
+        });
+    </script>
+</head>
+<body>
+<div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+    <form name="myForm" novalidate>
+        <div class="well">
+            点击这里显示 details 列表:
+            <input type="checkbox" ng-model="showDetails">
+            <br><br>
+            <details ng-open="showDetails">
+                <summary>details标签用于描述文档或文档某个部分的细节。</summary>
+                 - details 标签是 HTML 5 中的新标签<br>
+                 - open属性 定义 details 是否可见<br>
+                 - summary 标签可以为 details 定义标题<br>
+                 - 标题是可见的，用户点击标题时，会显示出 details<br>
+                 - 目前只有 Chrome 和 Safari 6 支持 details 标签<br>
+            </details>
+        </div>
+    </form>
+</div>
+</body>
+</html>

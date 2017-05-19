@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>Forms</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+        .controller("defaultCtrl", function ($scope) {
+            //
+        });
+    </script>
+</head>
+<body>
+<div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+    <form name="myForm" novalidate>
+        <div class="well">
+            点击复选框选择 "桔子" 选项:
+            <input type="checkbox" ng-model="mySel">
+            <p>我喜欢的水果:</p>
+            <select>
+                <option>苹果</option>
+                <option ng-selected="mySel">桔子</option>
+                <option>香蕉</option>
+            </select>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>使用CSS提供校验反馈信息</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+            .controller("defaultCtrl", function ($scope) {
+                $scope.addUser = function (userDetails) {
+                    $scope.message = " 用户名：" +userDetails.name
+                            + " ，邮箱：" + userDetails.email
+                            + "，同意协议："
+                            + userDetails.agreed;
+                };
+                $scope.message = "暂无";
+            });
+    </script>
+    <style>
+        form .ng-invalid.ng-dirty { background-color: lightpink; }
+        form .ng-valid.ng-dirty { background-color: lightgreen; }
+        span.summary.ng-invalid { color: red; font-weight: bold; }
+        span.summary.ng-valid { color: green; }
+    </style>
+</head>
+<body>
+    <div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+        <form name="myForm" novalidate ng-submit="addUser(newUser)">
+            <div class="well">
+                <div class="form-group">
+                    <label>用户名:</label>
+                    <input name="userName" type="text" class="form-control"
+                           required ng-model="newUser.name">
+                </div>
+                <div class="form-group">
+                    <label>邮箱:</label>
+                    <input name="userEmail" type="email" class="form-control"
+                           required ng-model="newUser.email">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="agreed" type="checkbox"
+                               ng-model="newUser.agreed" required>
+                        同意协义的相关内容
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"
+                        ng-disabled="myForm.$invalid">
+                    OK
+                </button>
+            </div>
+            <div class="well">
+                注册信息: {{message}}
+                <div>
+                表单验证:
+                    <span class="summary" 
+                          ng-class="myForm.$valid ? 'ng-valid' : 'ng-invalid'">
+                        {{myForm.$valid}}
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

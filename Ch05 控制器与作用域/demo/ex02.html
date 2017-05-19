@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>使用表单</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+                .controller("defaultCtrl", function ($scope) {
+                    $scope.cancel='取消';
+                });
+    </script>
+</head>
+<body>
+<div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+    <form name="myForm" novalidate>
+        <div class="well">
+            <div class="form-group">
+                <label>用户名:</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>密码:</label>
+                <input type="password" class="form-control" ">
+            </div>
+            <div class="form-group">
+                <label>邮箱:</label>
+                <input type="email" class="form-control" >
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">
+                    同意协议的相关事宜
+                </label>
+            </div>
+            <div class="checkbox">
+                <input type="submit" value="确定" class="btn">
+                <input type="submit" ng-value="'cancel'" class="btn">
+                <input type="submit" ng-value="cancel" class="btn">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">OK</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

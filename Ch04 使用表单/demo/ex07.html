@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>Forms-select</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+                .controller("defaultCtrl", function ($scope) {
+                    $scope.fru='桔子';
+                    $scope.arr= [
+                        { id: 100, fruit: "苹果", group: "水果" },
+                        { id: 200, fruit: "桔子", group: "水果" },
+                        { id: 300, fruit: "黄瓜", group: "蔬菜"},
+                        { id: 400, fruit: "油菜", group: "蔬菜"}
+                    ];
+                });
+    </script>
+</head>
+<body>
+<div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+    <form name="myForm" novalidate>
+        <div class="well">
+            <div class="form-group">
+                <label>选择一个选项:</label>
+                <select ng-model="fru1" ng-options="item.fruit group by item.group for item in arr">
+                    <option value="">(选一个)</option>
+                </select>
+            </div>
+        </div>
+        <div class="well">
+            <div class="form-group">
+                <label>选择一个选项:</label>
+                <select ng-model="fru" ng-options="item.fruit as item.fruit group by item.group for item in arr">
+                    <option value="">(选一个)</option>
+                </select>
+            </div>
+        </div>
+        <div class="well">
+            <p>你选择的是: {{fru || '无'}}</p>
+        </div>
+    </form>
+</div>
+</body>
+</html>
