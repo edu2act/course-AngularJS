@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>Forms</title>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+        .controller("defaultCtrl", function ($scope) {
+            //
+        });
+    </script>
+</head>
+<body>
+<div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+    <form name="myForm" novalidate>
+        <div class="well">
+            <input type="text" ng-readonly="true" value="只读">
+            <input type="text" ng-readonly="false">
+        </div>
+    </form>
+</div>
+</body>
+</html>

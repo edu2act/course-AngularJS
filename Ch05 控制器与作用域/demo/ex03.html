@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>Forms-select</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+                .controller("defaultCtrl", function ($scope) {
+                    $scope.todo = [
+                        { id: 100, fruit: "苹果", really: true },
+                        { id: 200, fruit: "桔子", really: true },
+                        { id: 300, fruit: "黄瓜", really: false}];
+                });
+    </script>
+</head>
+<body>
+<div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+    <form name="myForm" novalidate>
+        <div class="well">
+            <div class="form-group">
+                <label>选择一个选项:</label>
+                <select>
+                    <option value="">(选一个)</option>
+                    <option value="">苹果</option>
+                    <option value="">桔子</option>
+                    <option value="">黄瓜</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="well">
+            <div class="form-group">
+                <label>选择一个选项:</label>
+                <select ng-model="selectValue">
+                    <option value="">(选一个)</option>
+                    <option ng-repeat="x in todo">{{x.fruit}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="well">
+            <p>你选择的是: {{selectValue || '无'}}</p>
+        </div>
+    </form>
+</div>
+</body>
+</html>

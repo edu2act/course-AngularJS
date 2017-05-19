@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>表单验证反馈信息</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script>
+        angular.module("exampleApp", [])
+            .controller("defaultCtrl", function ($scope) {
+                $scope.addUser = function (userDetails) {
+                    $scope.message = " 用户名：" +userDetails.name
+                            + " ，邮箱：" + userDetails.email
+                            + "，同意协议："
+                            + userDetails.agreed;
+                };
+
+                $scope.message = "暂无";
+            });
+    </script>
+    <style>
+        form .ng-invalid-required.ng-dirty { background-color: lightpink; }
+        form .ng-invalid-email.ng-dirty { background-color: lightgoldenrodyellow; }
+        form .ng-valid.ng-dirty { background-color: lightgreen; }
+        span.summary.ng-invalid { color: red; font-weight: bold; }
+        span.summary.ng-valid { color: green; }
+        div.error {color: red; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+        <form name="myForm" novalidate ng-submit="addUser(newUser)">
+            <div class="well">
+                <div class="form-group">
+                    <label>邮箱:</label>
+                    <input name="userEmail" type="email" class="form-control"
+                           required ng-model="newUser.email">
+                    <div class="error" 
+                          ng-show="myForm.userEmail.$invalid && myForm.userEmail.$dirty">                        
+                        <span ng-show="myForm.userEmail.$error.email">
+                            请输入有效的电子邮件地址
+                        </span>
+                        <span ng-show="myForm.userEmail.$error.required">
+                            请输入邮箱地址,详细错误信息：{{myForm.userEmail.$error}}
+                        </span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"
+                        ng-disabled="myForm.$invalid">OK</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# course-AngularJS
+﻿# course-AngularJS
 AngularJS 课程简介有待补充。
 
 ## 课程大纲
@@ -105,6 +105,76 @@ AngularJS 课程简介有待补充。
 - [AngularJS 实战视频课程<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13">](http://www.imooc.com/learn/156)
 - [Angular 在线练习](http://www.learn-angular.org/)
 - [文字教程有待补充](*)
+
+
+### [09. 第 09章 Ajax和promise服务](*)
+
+【简单介绍，有待补充】
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](*) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/04. Stylus/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/04. Stylus/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/04. Stylus/VIDEOS.md)
+
+
+## 学习资料
+
+- [AngularJS 实战视频课程<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13">](http://www.imooc.com/learn/156)
+- [Angular 在线练习](http://www.learn-angular.org/)
+- [文字教程有待补充](*)
+
+### [10. 第 10章 REST服务](*)
+
+【简单介绍，有待补充】
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](*) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/04. Stylus/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/04. Stylus/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/04. Stylus/VIDEOS.md)
+
+
+## 学习资料
+
+- [AngularJS 实战视频课程<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13">](http://www.imooc.com/learn/156)
+- [Angular 在线练习](http://www.learn-angular.org/)
+- [文字教程有待补充](*)
+
+### [11. 第11章 视图和路由](*)
+
+【简单介绍，有待补充】
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](*) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/04. Stylus/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/04. Stylus/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/04. Stylus/VIDEOS.md)
+
+
+## 学习资料
+
+- [AngularJS 实战视频课程<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13">](http://www.imooc.com/learn/156)
+- [Angular 在线练习](http://www.learn-angular.org/)
+- [文字教程有待补充](*)
+
+
+### [12. 第12章 动画](*)
+
+【简单介绍，有待补充】
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](*) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/04. Stylus/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/04. Stylus/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/04. Stylus/VIDEOS.md)
+
+
+## 学习资料
+
+- [AngularJS 实战视频课程<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13">](http://www.imooc.com/learn/156)
+- [Angular 在线练习](http://www.learn-angular.org/)
+- [文字教程有待补充](*)
+
+### [13. 第13章 供应与注入服务](*)
+
+【简单介绍，有待补充】
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](*) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/04. Stylus/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/04. Stylus/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/04. Stylus/VIDEOS.md)
+
+
+## 学习资料
+
+- [AngularJS 实战视频课程<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13">](http://www.imooc.com/learn/156)
+- [Angular 在线练习](http://www.learn-angular.org/)
+- [文字教程有待补充](*)
+
+
+
 
 
 
